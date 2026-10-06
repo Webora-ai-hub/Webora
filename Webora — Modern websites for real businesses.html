@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Webora — Modern websites for real businesses</title>
+<meta name="description" content="Webora builds modern, professional websites for real businesses. Bronze $199, Silver $299, Gold $399. Mobile-friendly, SEO-ready, built to convert.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--lav:#b9a8f0;--ice:#a9c4f5;--navy:#0b1030;--bg:#f6f7fc;--ink:#0b1030;--mut:#5b6283;--card:rgba(255,255,255,.65);--line:rgba(11,16,48,.1);--g:linear-gradient(120deg,#b9a8f0,#a9c4f5);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="light"]){}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:90px;height:auto}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.f{font-family:Sora,Inter,sans-serif;letter-spacing:-.03em}
+a{color:inherit;text-decoration:none}
+.w{max-width:1160px;margin:auto;padding:0 22px}
+section{padding:110px 0;position:relative}
+.gt{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font:600 12px Sora;letter-spacing:.18em;color:var(--mut);margin-bottom:16px}
+h2{font-size:clamp(34px,5.4vw,64px);line-height:1.05;font-weight:800;margin-bottom:20px}
+.lead{color:var(--mut);max-width:620px;font-size:19px}
+.btn{display:inline-block;padding:16px 28px;border-radius:99px;font:600 14px Sora;letter-spacing:.04em;transition:.3s;cursor:pointer;border:0}
+.btn.p{background:var(--navy);color:#fff;box-shadow:0 10px 30px rgba(11,16,48,.25)}
+.btn.p:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(143,125,230,.45)}
+.btn.s{border:1px solid var(--line);background:var(--card)}.btn.s:hover{background:#fff;transform:translateY(-3px)}
+nav{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);width:min(1100px,calc(100% - 24px));z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 14px 12px 24px;border-radius:99px;background:rgba(246,247,252,.6);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);transition:.3s}
+nav.sc{background:rgba(246,247,252,.88);box-shadow:0 10px 40px rgba(11,16,48,.1)}
+.logo{font:800 20px Sora;letter-spacing:.14em}
+.links{display:flex;gap:30px;font:500 14px Sora}.links a:hover{color:#7d6bd6}
+.cta{padding:11px 22px;font-size:13px}
+.ham{display:none;width:44px;height:44px;background:none;border:0;cursor:pointer;position:relative}
+.ham i{position:absolute;left:11px;width:22px;height:2px;background:var(--navy);transition:.3s}.ham i:nth-child(1){top:15px}.ham i:nth-child(2){top:21px}.ham i:nth-child(3){top:27px}
+.ham.o i:nth-child(1){top:21px;transform:rotate(45deg)}.ham.o i:nth-child(2){opacity:0}.ham.o i:nth-child(3){top:21px;transform:rotate(-45deg)}
+.menu{display:none}
+.hero{padding:170px 0 90px;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;animation:drift 14s ease-in-out infinite alternate;z-index:0}
+@keyframes drift{to{transform:translate(50px,40px) scale(1.15)}}
+.hero h1{font-size:clamp(44px,8vw,104px);line-height:.96;font-weight:800;position:relative;z-index:1}
+.hero p{margin:28px 0 36px;max-width:560px;font-size:20px;color:var(--mut);position:relative;z-index:1}
+.row{display:flex;gap:14px;flex-wrap:wrap;position:relative;z-index:1}
+.stage{position:relative;margin-top:80px;height:480px;z-index:1}
+.br{background:#fff;border-radius:18px;border:1px solid var(--line);box-shadow:0 40px 80px rgba(60,50,140,.2);overflow:hidden}
+.br b{display:flex;gap:6px;padding:11px 14px;background:#eef0fa}.br b i{width:9px;height:9px;border-radius:50%;background:#cfd3ea}
+.main{position:absolute;left:50%;top:0;width:min(640px,86%);transform:translateX(-50%);animation:fl 7s ease-in-out infinite}
+.mob{position:absolute;right:6%;top:90px;width:170px;border-radius:30px;border:6px solid var(--navy);background:#fff;box-shadow:0 30px 60px rgba(60,50,140,.3);overflow:hidden;animation:fl 6s ease-in-out -2s infinite}
+@keyframes fl{50%{translate:0 -14px}}
+.mk{height:300px;padding:24px;background:linear-gradient(160deg,#fff,#eceaff)}
+.mk .bar{height:10px;border-radius:9px;background:var(--g);margin-bottom:12px}
+.mk h4{font:800 28px/1.1 Sora;margin:26px 0 12px;color:var(--navy)}
+.mk .pill{display:inline-block;padding:8px 16px;border-radius:99px;background:var(--navy);color:#fff;font:600 11px Sora}
+.chip{position:absolute;padding:11px 18px;border-radius:14px;background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.8);box-shadow:0 12px 30px rgba(60,50,140,.15);font:600 11px Sora;letter-spacing:.1em;animation:fl 5s ease-in-out infinite}
+.dark{background:var(--navy);color:#fff;overflow:hidden}.dark .lead,.dark .eyebrow{color:#aab2d9}
+.term{margin-top:50px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(185,168,240,.3);padding:28px;max-width:760px;backdrop-filter:blur(10px)}
+.msg{padding:14px 18px;border-radius:14px;margin-bottom:12px;max-width:85%;font-size:16px}
+.u{background:rgba(255,255,255,.1);margin-left:auto}.ai{background:linear-gradient(120deg,rgba(185,168,240,.25),rgba(169,196,245,.25))}
+.steps li{list-style:none;padding:9px 0;opacity:.25;transition:.5s;font:500 15px Sora}.steps li.on{opacity:1}.steps li.on:before{content:"✓ ";color:var(--ice)}
+.steps li:before{content:"○ "}
+.note{font-size:14px;color:#aab2d9;margin-top:18px}
+.big{font-size:clamp(40px,7vw,92px);line-height:1;font-weight:800;text-align:center}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;backdrop-filter:blur(10px);transition:.4s}
+.card:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(110,95,200,.18);border-color:var(--lav)}
+.card .n{font:800 13px Sora;color:#8f7de6;letter-spacing:.14em}.card h3{font-size:20px;margin:22px 0 10px}.card p{color:var(--mut);font-size:15px}
+.work{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:50px}
+.pj{position:relative;border-radius:22px;overflow:hidden;cursor:pointer}
+.pj .br{border-radius:22px}.pv{height:300px;transition:transform .7s;padding:26px;display:flex;flex-direction:column;justify-content:flex-end}
+.pj:hover .pv{transform:scale(1.07)}
+.pv h4{font:800 30px/1.05 Sora;color:inherit}.pv small{font:600 10px Sora;letter-spacing:.16em;opacity:.7;margin-bottom:8px}
+.pv span{margin-top:14px;display:inline-block;width:max-content;padding:7px 15px;border-radius:99px;font:600 11px Sora;background:rgba(255,255,255,.85);color:var(--navy)}
+.ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,16,48,.88),rgba(11,16,48,.25));color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:26px;opacity:0;transition:.4s}
+.pj:hover .ov,.pj:focus-within .ov{opacity:1}.ov b{font:600 13px Sora;letter-spacing:.1em;margin-top:6px}
+.tag{position:absolute;top:44px;right:14px;z-index:2;font:600 10px Sora;letter-spacing:.14em;padding:6px 12px;border-radius:99px;background:rgba(11,16,48,.8);color:#fff}
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;align-items:center}
+.pk{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:34px 30px;backdrop-filter:blur(12px);transition:.4s;position:relative}
+.pk:hover{transform:translateY(-6px)}
+.pk.rec{background:#fff;padding:46px 32px;border:1px solid var(--lav);box-shadow:0 0 0 6px rgba(185,168,240,.18),0 40px 90px rgba(120,100,230,.3)}
+.pk .lb{font:600 11px Sora;letter-spacing:.16em;color:var(--mut)}.rec .lb{color:#7d6bd6}
+.pk .pr{font:800 56px Sora;letter-spacing:-.04em;margin:10px 0}
+.pk p{color:var(--mut);font-size:15px;margin-bottom:20px}
+.pk ul{list-style:none;padding:0;margin:0 0 28px;font-size:14px}.pk li{padding:5px 0 5px 24px;position:relative}.pk li:before{content:"✓";position:absolute;left:0;color:#8f7de6;font-weight:700}
+.pk .btn{width:100%;text-align:center}
+.badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--g);color:var(--navy);font:800 11px Sora;letter-spacing:.14em;padding:8px 18px;border-radius:99px}
+.sup{margin-top:70px;border-radius:30px;padding:46px;background:linear-gradient(130deg,rgba(185,168,240,.3),rgba(169,196,245,.3));border:1px solid rgba(255,255,255,.8)}
+.sup h3{font-size:32px;margin-bottom:12px}.ex{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}.ex span{background:#fff;padding:9px 16px;border-radius:99px;font-size:14px}
+.sup small{color:var(--mut);display:block;max-width:700px}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:60px;position:relative}
+.tl:before{content:"";position:absolute;top:22px;left:0;height:2px;width:0;background:var(--g);transition:width 1.8s}.tl.in:before{width:100%}
+.st{position:relative;padding-top:56px}.st i{position:absolute;top:0;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;font:700 13px Sora;font-style:normal;display:grid;place-items:center}
+.st h3{font-size:18px;margin-bottom:8px}.st p{color:var(--mut);font-size:15px}
+.dash{margin-top:60px;max-width:620px;padding:30px;border-radius:26px;background:#fff;border:1px solid var(--line);box-shadow:0 30px 70px rgba(110,95,200,.18)}
+.pb{height:10px;background:#e8eaf7;border-radius:9px;margin:16px 0;overflow:hidden}.pb div{height:100%;width:0;background:var(--g);border-radius:9px;transition:width 2s}
+.dash li{list-style:none;padding:6px 0;font-size:15px}.dash li:before{content:"✓ ";color:#8f7de6;font-weight:700}.dash li.t{color:var(--mut)}.dash li.t:before{content:"→ "}
+.form{max-width:680px;margin:44px auto 0;background:#fff;border-radius:28px;padding:36px;border:1px solid var(--line);box-shadow:0 30px 70px rgba(110,95,200,.15)}
+.prog{display:flex;gap:8px;margin-bottom:26px}.prog i{flex:1;height:5px;border-radius:9px;background:#e8eaf7}.prog i.on{background:var(--g)}
+.fs{display:none}.fs.on{display:block}
+label{display:block;font:600 12px Sora;letter-spacing:.06em;margin:14px 0 6px}
+input,textarea{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:14px;font:16px Inter;background:var(--bg)}
+input:focus,textarea:focus{outline:2px solid var(--lav)}
+.fn{display:flex;justify-content:space-between;margin-top:26px}
+details{border-bottom:1px solid var(--line);padding:22px 0}summary{font:600 18px Sora;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:#8f7de6;font-size:24px;transition:.3s}details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mut);margin-top:12px;max-width:760px}
+.fin{text-align:center;padding:140px 0}.fin h2{font-size:clamp(36px,6vw,78px)}
+.ph{display:block;margin-top:30px;font:600 24px Sora;color:var(--ice)}
+footer{background:#070a22;color:#aab2d9;padding:50px 0 40px;font-size:14px}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}footer .logo{color:#fff}footer a{margin-right:18px}footer a:hover{color:#fff}
+.rv{opacity:0;transform:translateY(34px);transition:1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
+@media(max-width:900px){
+section{padding:76px 0}.links,.nav-cta{display:none}.ham{display:block}
+.menu{display:flex;flex-direction:column;position:fixed;top:calc(78px + env(safe-area-inset-top,0px));left:12px;right:12px;z-index:49;padding:26px;border-radius:26px;background:rgba(246,247,252,.96);backdrop-filter:blur(18px);border:1px solid var(--line);font:600 20px Sora;gap:18px;opacity:0;pointer-events:none;transform:translateY(-10px);transition:.3s}
+.menu.o{opacity:1;pointer-events:auto;transform:none}
+.grid4,.work,.tl{grid-template-columns:1fr}.stage{height:420px}.mob{right:0;width:130px}.chip:nth-of-type(n+3){display:none}
+.price{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding:20px 22px 30px;margin:36px -22px 0}
+.pk{min-width:82%;scroll-snap-align:center}.pj .ov{opacity:1;background:linear-gradient(0deg,rgba(11,16,48,.7),transparent 60%)}
+.sup{padding:30px 22px}.tl:before{display:none}}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#f6f7fc}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+<nav id="nav"><a class="logo" href="#top">WEBORA</a>
+<div class="links"><a href="#work">Work</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
+<a class="btn p cta nav-cta" href="#pricing">GET STARTED</a>
+<button class="ham" id="ham" aria-label="Menu"><i></i><i></i><i></i></button></nav>
+<div class="menu" id="menu"><a href="#work">Work</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#faq">FAQ</a><a class="btn p" href="#pricing" style="text-align:center">GET STARTED</a></div>
+
+<header class="hero" id="top">
+<div class="orb" style="width:520px;height:520px;background:#b9a8f0;top:-120px;right:-100px"></div>
+<div class="orb" style="width:460px;height:460px;background:#a9c4f5;top:260px;left:-160px"></div>
+<div class="w"><h1>YOUR BUSINESS.<br>BUILT FOR THE<br><span class="gt">DIGITAL WORLD.</span></h1>
+<p>Webora creates modern websites that make businesses look credible, get noticed, and turn visitors into customers.</p>
+<div class="row"><a class="btn p" href="#pricing">START MY WEBSITE →</a><a class="btn s" href="#work">EXPLORE OUR WORK →</a></div>
+<div class="stage">
+<div class="br main"><b><i></i><i></i><i></i></b><div class="mk"><div class="bar" style="width:40%"></div><h4>Look established<br>before they call.</h4><span class="pill">BOOK NOW</span></div></div>
+<div class="mob"><div class="mk" style="height:260px;padding:16px"><div class="bar" style="width:50%"></div><h4 style="font-size:20px">Mike's<br>Auto Detailing</h4><span class="pill">CALL</span></div></div>
+<div class="chip" style="left:0;top:40px">AI-ASSISTED DESIGN</div><div class="chip" style="right:2%;top:10px;animation-delay:-1s">MOBILE OPTIMIZED</div>
+<div class="chip" style="left:6%;top:300px;animation-delay:-2s">SEO READY</div><div class="chip" style="right:24%;top:340px;animation-delay:-3s">CONVERSION FOCUSED</div>
+</div></div></header>
+
+<section class="dark" id="ai"><div class="orb" style="width:420px;height:420px;background:#7d6bd6;right:-100px;top:0;opacity:.35"></div>
+<div class="w"><div class="eyebrow">AI-ASSISTED WORKFLOW</div><h2>DESIGN, SUPERCHARGED <span class="gt">BY AI.</span></h2>
+<p class="lead">We combine modern design, smart automation, and AI-assisted workflows to build better websites faster — without sacrificing the human touch.</p>
+<div class="term rv" id="term"><div class="msg u">I need a website for my auto detailing business.</div><div class="msg ai" id="ai1">Building your digital presence…</div>
+<ul class="steps" id="steps"><li>Homepage</li><li>Services</li><li>Mobile Experience</li><li>Contact System</li><li>SEO Structure</li><li>Conversion Sections</li></ul>
+<button class="btn s" style="color:#fff;border-color:rgba(255,255,255,.3);background:none;margin-top:14px" id="replay">↻ REPLAY</button>
+<p class="note">AI is one part of Webora's research, content, and development workflow. Every site is reviewed and refined by a real person.</p></div></div></section>
+
+<section><div class="w"><h2 class="big rv">YOUR WEBSITE IS YOUR<br><span class="gt">FIRST IMPRESSION.</span></h2>
+<p class="lead rv" style="margin:26px auto 0;text-align:center"><b style="color:var(--ink)">Make it count.</b> Customers often look a business up online before they decide to call. Be ready when they do.</p></div></section>
+
+<section style="padding-top:0"><div class="w"><h2 class="rv">NOT JUST A WEBSITE.<br>YOUR DIGITAL <span class="gt">FIRST IMPRESSION.</span></h2>
+<div class="grid4">
+<div class="card rv"><div class="n">01</div><h3>LOOK BETTER</h3><p>Modern design that makes your business look established.</p></div>
+<div class="card rv"><div class="n">02</div><h3>BUILD TRUST</h3><p>A professional website gives customers confidence before they ever call.</p></div>
+<div class="card rv"><div class="n">03</div><h3>GET FOUND</h3><p>SEO-ready structure built with search visibility in mind.</p></div>
+<div class="card rv"><div class="n">04</div><h3>CONVERT MORE</h3><p>Clear layouts and calls-to-action designed to turn visitors into customers.</p></div></div></div></section>
+
+<section id="work" style="padding-top:40px"><div class="w"><div class="eyebrow">PORTFOLIO</div><h2 class="rv">SEE WHAT WE <span class="gt">CAN BUILD.</span></h2>
+<p class="lead">Webora demo concepts — examples of the quality we build for your business.</p>
+<div class="work" id="wk"></div>
+<div style="text-align:center;margin-top:44px"><a class="btn s" href="#pricing">VIEW ALL WORK →</a></div></div></section>
+
+<section id="services" style="background:#eceefb"><div class="w"><div class="eyebrow">SERVICES</div><h2 class="rv">YOUR BUSINESS DESERVES<br>MORE THAN <span class="gt">A TEMPLATE.</span></h2>
+<div class="grid4" style="grid-template-columns:repeat(3,1fr)" id="sv"></div></div></section>
+
+<section id="pricing"><div class="w" style="text-align:center"><div class="eyebrow">PRICING</div><h2 class="rv">CHOOSE YOUR <span class="gt">WEBORA PACKAGE.</span></h2>
+<p class="lead" style="margin:auto">Simple packages. Professional websites. No unnecessary complexity.</p>
+<div class="price" style="text-align:left">
+<div class="pk rv"><div class="lb">GET ONLINE</div><h3>BRONZE</h3><div class="pr">$199</div><p>For businesses that need a professional online presence.</p><ul><li>Up to 3 website pages</li><li>Custom website design</li><li>Mobile-friendly design</li><li>Contact form</li><li>Business information &amp; service sections</li><li>Social media links</li><li>Google Maps integration</li><li>Basic SEO setup</li><li>Responsive design</li><li>1 round of revisions</li><li>Website launch/setup</li></ul><a class="btn s" href="#intake" data-pk="Bronze">GET BRONZE →</a></div>
+<div class="pk rec rv"><div class="badge">MOST POPULAR</div><div class="lb">RECOMMENDED</div><h3>SILVER</h3><div class="pr">$299</div><p>For businesses ready to look more established online.</p><ul><li>Everything in Bronze</li><li>Up to 5 website pages</li><li>Fast turnaround</li><li>30 Days of Website Support &amp; Updates</li><li>Text, photo, hours &amp; pricing updates</li><li>Minor design adjustments &amp; fixes</li><li>Basic SEO optimization</li><li>Click-to-call phone button</li><li>Contact/lead form</li><li>Google Maps &amp; social integration</li><li>2 rounds of revisions</li></ul><a class="btn p" href="#intake" data-pk="Silver">GET SILVER →</a></div>
+<div class="pk rv"><div class="lb">COMPLETE PACKAGE</div><h3>GOLD</h3><div class="pr">$399</div><p>For businesses wanting a more advanced digital presence.</p><ul><li>Everything in Silver</li><li>Up to 8 website pages</li><li>Custom logo design</li><li>Premium custom website design</li><li>Advanced page layouts</li><li>Advanced contact/lead forms</li><li>Booking/request-a-quote</li><li>Enhanced SEO setup</li><li>Click-to-call &amp; click-to-email</li><li>Image optimization</li><li>3 rounds of revisions</li><li>Priority support for the first 30 days</li></ul><a class="btn s" href="#intake" data-pk="Gold">GET GOLD →</a></div></div>
+<div class="sup rv" style="text-align:left"><h3>30 DAYS OF WEBORA SUPPORT</h3><p>Choose Silver or Gold and you don't have to disappear after launch. For 30 days, you can reach out to Webora for reasonable website updates and minor changes.</p>
+<div class="ex"><span>“Change my business hours.”</span><span>“Update this photo.”</span><span>“Change my service pricing.”</span><span>“Add this information.”</span><span>“Fix this small issue.”</span><span>“Change this text.”</span></div>
+<small>Support covers reasonable updates and minor changes. New pages, major redesigns, major new features, or substantial additional development may require an additional fee.</small></div></div></section>
+
+<section id="process" style="padding-top:20px"><div class="w"><div class="eyebrow">HOW IT WORKS</div><h2 class="rv">FOUR STEPS. <span class="gt">ZERO CONFUSION.</span></h2>
+<div class="tl" id="tl">
+<div class="st"><i>01</i><h3>CHOOSE YOUR PACKAGE</h3><p>Pick the Webora package that fits your business.</p></div>
+<div class="st"><i>02</i><h3>TELL US ABOUT YOUR BUSINESS</h3><p>Send your business information, services, photos, logo, social links, and preferences.</p></div>
+<div class="st"><i>03</i><h3>WE BUILD</h3><p>Webora designs and builds your website around your business.</p></div>
+<div class="st"><i>04</i><h3>REVIEW &amp; LAUNCH</h3><p>Review your website, request included revisions, and get ready to go live.</p></div></div>
+<div class="dash rv" id="dash"><div class="eyebrow">PROJECT · SAMPLE DASHBOARD</div><h3 class="f" style="font-size:26px">Mike's Auto Detailing</h3><div style="color:var(--mut);font-size:14px;margin-top:4px">STATUS: Designing… <b id="pct" style="float:right;color:var(--ink)">0%</b></div>
+<div class="pb"><div id="bar"></div></div><ul style="padding:0"><li>Business Information</li><li>Brand Assets</li><li>Site Structure</li><li>Desktop Design</li><li>Mobile Design</li><li class="t">Final Review</li></ul></div></div></section>
+
+<section id="intake" style="background:#eceefb"><div class="w"><div style="text-align:center"><div class="eyebrow">AFTER CHECKOUT</div><h2>LET'S BUILD <span class="gt">YOUR WEBSITE.</span></h2>
+<p class="lead" style="margin:auto">Tell us about your business. We'll take it from here.</p></div>
+<form class="form" id="form"><div class="prog"><i class="on"></i><i></i><i></i></div>
+<div class="fs on"><h3 class="f">The basics</h3><label>Package</label><input id="pkg" placeholder="Bronze / Silver / Gold"><label>Business name</label><input><label>Owner / contact name</label><input><label>Phone</label><input type="tel"><label>Email</label><input type="email"></div>
+<div class="fs"><h3 class="f">Your business</h3><label>Business description</label><textarea rows="3"></textarea><label>Services</label><textarea rows="3"></textarea><label>Business hours</label><input><label>Social media links</label><input></div>
+<div class="fs"><h3 class="f">Look &amp; feel</h3><label>Logo</label><input type="file"><label>Photos</label><input type="file" multiple><label>Preferred colors</label><input><label>Websites you like</label><input><label>Additional notes</label><textarea rows="3"></textarea></div>
+<div class="fn"><button type="button" class="btn s" id="bk">← BACK</button><button type="button" class="btn p" id="nx">NEXT →</button></div>
+<p style="font-size:13px;color:var(--mut);margin-top:18px">Preview form. Checkout and form submission connect once payment is set up.</p></form></div></section>
+
+<section><div class="w"><div class="eyebrow">PROOF</div><h2 class="rv">BUILT TO MAKE A <span class="gt">FIRST IMPRESSION.</span></h2>
+<p class="lead">Explore the demo concepts above. Real client stories will live here as Webora grows.</p></div></section>
+
+<section id="faq" style="padding-top:20px"><div class="w" style="max-width:860px"><div class="eyebrow">FAQ</div><h2>GOOD QUESTIONS.</h2><div id="fq"></div></div></section>
+
+<section class="dark fin"><div class="orb" style="width:520px;height:520px;background:#7d6bd6;left:10%;top:-100px;opacity:.4"></div><div class="orb" style="width:420px;height:420px;background:#a9c4f5;right:8%;bottom:-120px;opacity:.3"></div>
+<div class="w" style="position:relative"><h2>YOUR NEXT CUSTOMER<br>COULD BE <span class="gt">ONE CLICK AWAY.</span></h2>
+<p class="lead" style="margin:auto">Give your business a website that looks as good as the business behind it.</p>
+<div class="row" style="justify-content:center;margin-top:34px"><a class="btn p" style="background:#fff;color:var(--navy)" href="#pricing">START MY WEBSITE →</a></div>
+<a class="ph" href="tel:+12053789827">(205) 378-9827</a></div></section>
+
+<footer><div class="w"><div><div class="logo">WEBORA</div><p style="margin-top:8px">Modern websites for real businesses.</p></div>
+<div><a href="#work">Work</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="tel:+12053789827">Contact</a><p style="margin-top:12px"><a href="tel:+12053789827">(205) 378-9827</a></p></div></div></footer>
+
+<script>
+var $=function(s){return document.querySelector(s)};
+var W=[["Restaurant","Ember &amp; Oak","linear-gradient(150deg,#1a1f45,#4b3f9a)","#fff"],["Barbershop","Sharp &amp; Co.","linear-gradient(150deg,#e9ebfa,#b9a8f0)","#0b1030"],["Auto Detailing","Mirror Finish","linear-gradient(150deg,#0b1030,#3c5aa8)","#fff"],["Cleaning Company","Fresh Start","linear-gradient(150deg,#f6f7fc,#a9c4f5)","#0b1030"],["Landscaping","Green Lane","linear-gradient(150deg,#dfe4fb,#8c9ff0)","#0b1030"],["Beauty / Spa","Lumen Studio","linear-gradient(150deg,#f3eeff,#c9b9f5)","#0b1030"]];
+$('#wk').innerHTML=W.map(function(p){return '<div class="pj rv" tabindex="0"><div class="tag">WEBORA DEMO · CONCEPT</div><div class="br"><b><i></i><i></i><i></i></b><div class="pv" style="background:'+p[2]+';color:'+p[3]+'"><small>'+p[0].toUpperCase()+'</small><h4>'+p[1]+'</h4><span>BOOK NOW</span></div></div><div class="ov"><small class="f" style="opacity:.7">'+p[0].toUpperCase()+'</small><h3 class="f" style="font-size:26px">'+p[1]+'</h3><b>VIEW PROJECT →</b></div></div>'}).join('');
+var S=[["CUSTOM WEBSITE DESIGN","Websites designed around your business instead of forcing your business into a template."],["MOBILE-FIRST DESIGN","Beautiful experiences across phones, tablets, and desktops."],["SEO FOUNDATION","Technical and on-page foundations prepared for search visibility."],["CONVERSION DESIGN","Layouts designed to make it easy for customers to take action."],["BOOKING &amp; CONTACT","Forms, maps, booking/request systems, social links, and other business tools."],["AI-ASSISTED WORKFLOW","Modern AI tools used to accelerate research, content, design exploration, and development."]];
+$('#sv').innerHTML=S.map(function(s,i){return '<div class="card rv"><div class="n">0'+(i+1)+'</div><h3>'+s[0]+'</h3><p>'+s[1]+'</p></div>'}).join('');
+var F=[["How long does a website take?","Timelines depend on the package and how quickly you send your information. Silver and Gold include fast turnaround; Webora will confirm your schedule after you purchase."],["What do I need to provide?","Your business information, services, hours, photos, logo (if you have one), social links, and any preferences. The intake form walks you through it."],["Do I need my own logo?","No. If you have one, send it. Custom logo design is included with Gold."],["Can you redesign my current website?","Yes. Tell us about your current site in the intake form and we'll build something stronger around your business."],["Will my website work on phones?","Yes. Every package includes a mobile-friendly, responsive design."],["Can I request changes?","Yes. Bronze includes 1 round of revisions, Silver 2, and Gold 3."],["What is included in the 30-day support?","Silver and Gold include 30 days of reasonable updates and minor changes, like text, photos, hours, pricing, and small fixes. New pages, major redesigns, or major new features may cost extra."],["What happens after I purchase?","You'll complete a short client intake form. Then Webora designs and builds your site, you review it, request included revisions, and launch."],["Can you build a website for any type of business?","Webora builds for real, local businesses of many kinds. Call (205) 378-9827 if you're unsure about yours."],["Do I need to pay monthly?","The packages are listed as one-time prices. Ask Webora about hosting or domain details before you buy."]];
+$('#fq').innerHTML=F.map(function(f){return '<details><summary>'+f[0]+'</summary><p>'+f[1]+'</p></details>'}).join('');
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});
+document.querySelectorAll('.rv,#tl').forEach(function(e){io.observe(e)});
+addEventListener('scroll',function(){$('#nav').classList.toggle('sc',scrollY>20)});
+$('#ham').onclick=function(){this.classList.toggle('o');$('#menu').classList.toggle('o')};
+document.querySelectorAll('#menu a').forEach(function(a){a.onclick=function(){$('#ham').classList.remove('o');$('#menu').classList.remove('o')}});
+function run(){var l=document.querySelectorAll('#steps li');l.forEach(function(x){x.classList.remove('on')});l.forEach(function(x,i){setTimeout(function(){x.classList.add('on')},700+i*600)})}
+new IntersectionObserver(function(e,o){if(e[0].isIntersecting){run();o.disconnect()}},{threshold:.5}).observe($('#term'));$('#replay').onclick=run;
+new IntersectionObserver(function(e,o){if(e[0].isIntersecting){$('#bar').style.width='80%';var n=0,t=setInterval(function(){n+=2;$('#pct').textContent=n+'%';if(n>=80)clearInterval(t)},40);o.disconnect()}},{threshold:.5}).observe($('#dash'));
+var st=0,fs=document.querySelectorAll('.fs'),pg=document.querySelectorAll('.prog i');
+function show(){fs.forEach(function(f,i){f.classList.toggle('on',i==st)});pg.forEach(function(p,i){p.classList.toggle('on',i<=st)});$('#nx').textContent=st==2?'SUBMIT ✓':'NEXT →'}
+$('#nx').onclick=function(){if(st<2){st++;show()}else{$('#form').innerHTML='<h3 class="f" style="font-size:26px">Thank you!</h3><p style="color:var(--mut);margin-top:10px">This is a preview form. Once connected, your details go straight to Webora.</p>'}};
+$('#bk').onclick=function(){if(st>0){st--;show()}};
+document.querySelectorAll('[data-pk]').forEach(function(a){a.addEventListener('click',function(){$('#pkg').value=a.dataset.pk})});
+</script></body></html>
